@@ -9,12 +9,14 @@ const robot = {
             return 'Sensors are currently down.'
         }
     },
-    set numOfSensors(num){
-        if(typeof num === 'number' && num >= 0){
+    set numOfSensors(num) {
+        if (typeof num === 'number' && num >= 0){
             this._numOfSensors = num;
         } else {
-            console.log(`Pass in a number that is greater than or equal to 0`);
+            console.log('Pass in a number that is greater than or equal to 0')
+        }
     }
-    }
-
 };
+
+robot.numOfSensors = 100;
+console.log(robot.numOfSensors);
